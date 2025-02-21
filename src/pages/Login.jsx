@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAuth } from "../context/authContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -71,6 +71,13 @@ const Login = () => {
         >
           Sign in with Google
         </button>
+        {/* Sign Up Link */}
+        <p className="text-center text-gray-600">
+          Don't have an account?{" "}
+          <Link to="/register" className="text-blue-600 hover:underline">
+            Sign Up
+          </Link>
+        </p>
       </div>
     </div>
   );
